@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Download Link Skipper (suprafiles, zippyshare, filemack)
 // @namespace    http://tampermonkey.net/
-// @version      0.5
+// @version      1.0
 // @description  Skips the extra clicking needed when downloading stuff
 // @author       spyruf
 // @include      http://*suprafiles.*/*
