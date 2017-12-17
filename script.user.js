@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Download Link Skipper (suprafiles, zippyshare, filemack, dbree, cloudyfiles, 9clacks)
 // @namespace    http://tampermonkey.net/
-// @version      1.3
+// @version      1.4
 // @description  Skips the extra clicking needed when downloading stuff
 // @author       spyruf
 // @include      *9clacks*.*
@@ -87,6 +87,8 @@ if (window.top != window.self) //-- Don't run on frames or iframes
       $('a:contains("320 DL"):contains("suprafiles")')[0].click();
     else if ($('a:contains("320 DL")')[0] !== null)
       $('a:contains("320 DL")')[0].click();
+
+    window.close();
 
 
   } else if (window.location.href.indexOf("filemack") != -1) {
