@@ -1,13 +1,14 @@
 // ==UserScript==
 // @name         Download Link Skipper (suprafiles, zippyshare, filemack)
 // @namespace    http://tampermonkey.net/
-// @version      1.1
+// @version      1.2
 // @description  Skips the extra clicking needed when downloading stuff
 // @author       spyruf
-// @include      http://*suprafiles.*/*
-// @include      https://*filemack.com/*
-// @include      http://*zippyshare.com/*
-// @include      http://dbr.ee/*
+// @include      *suprafiles.*/*
+// @include      *cloudyfiles.*/*
+// @include      *filemack.com/*
+// @include      *zippyshare.com/*
+// @include      *dbr.ee/*
 // @grant        none
 // @require http://code.jquery.com/jquery-latest.js
 
@@ -72,6 +73,17 @@ if (window.top != window.self) //-- Don't run on frames or iframes
     });
 
     $('a:contains("fs")')[0].click();
+
+  } else if (window.location.href.indexOf("cloudyfiles") != -1) {
+
+    var supraSubmit = $(':submit').each(function() {
+      (this).click();
+    });
+
+    $('.btn-xs')[0].click();
+
+    $('a:contains("s1")')[0].click();
+
 
   } else if (window.location.href.indexOf("dbr") != -1) {
 
