@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Download Link Skipper (suprafiles, zippyshare, filemack, dbree, cloudyfiles, 9clacks)
 // @namespace    http://tampermonkey.net/
-// @version      1.4
+// @version      1.5
 // @description  Skips the extra clicking needed when downloading stuff
 // @author       spyruf
 // @include      *9clacks*.*
@@ -12,7 +12,7 @@
 // @include      *zippyshare.com/*
 // @include      *dbr.ee/*
 // @grant        none
-// @require http://code.jquery.com/jquery-latest.js
+// @require http://code.jqueray.com/jquery-latest.js
 
 // ==/UserScript==
 
@@ -87,6 +87,22 @@ if (window.top != window.self) //-- Don't run on frames or iframes
       $('a:contains("320 DL"):contains("suprafiles")')[0].click();
     else if ($('a:contains("320 DL")')[0] !== null)
       $('a:contains("320 DL")')[0].click();
+
+    //M4A
+    else if ($('a:contains("M4A DL"):contains("dbree")')[0] !== null)
+      $('a:contains("M4A DL"):contains("dbree")')[0].click();
+    else if ($('a:contains("M4A DL"):contains("suprafiles")')[0] !== null)
+      $('a:contains("M4A DL"):contains("suprafiles")')[0].click();
+    else if ($('a:contains("M4A DL")')[0] !== null)
+      $('a:contains("M4A DL")')[0].click();
+
+    //CDQ
+    else if ($('a:contains("CDQ DL"):contains("dbree")')[0] !== null)
+      $('a:contains("CDQ DL"):contains("dbree")')[0].click();
+    else if ($('a:contains("CDQ DL"):contains("suprafiles")')[0] !== null)
+      $('a:contains("CDQ DL"):contains("suprafiles")')[0].click();
+    else if ($('a:contains("CDQ DL")')[0] !== null)
+      $('a:contains("CDQ DL")')[0].click();
 
     window.close();
 
