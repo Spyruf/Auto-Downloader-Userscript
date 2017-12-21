@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Download Link Skipper (suprafiles, zippyshare, filemack, dbree, cloudyfiles, 9clacks)
 // @namespace    http://tampermonkey.net/
-// @version      1.5
+// @version      1.6
 // @description  Skips the extra clicking needed when downloading stuff
 // @author       spyruf
 // @include      *9clacks*.*
@@ -12,7 +12,7 @@
 // @include      *zippyshare.com/*
 // @include      *dbr.ee/*
 // @grant        none
-// @require http://code.jqueray.com/jquery-latest.js
+// @require http://code.jquery.com/jquery-latest.js
 
 // ==/UserScript==
 
