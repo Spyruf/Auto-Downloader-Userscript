@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Download Link Skipper (suprafiles, zippyshare, filemack, dbree, cloudyfiles, 9clacks)
 // @namespace    http://tampermonkey.net/
-// @version      1.7
+// @version      1.8
 // @description  Skips the extra clicking needed when downloading stuff
 // @author       spyruf
 // @include      *9clacks*.*
@@ -60,8 +60,15 @@ if (window.top != window.self) //-- Don't run on frames or iframes
 
 
     localStorage.setItem('download', 'false');
-    window.history.back();
+
+    var isSafari = /constructor/i.test(window.HTMLElement) || (function(p) {
+      return p.toString() === "[object SafariRemoteNotification]";
+    })(!window['safari'] || safari.pushNotification);
+
+    if (isSafari == false)
+      window.history.back();
     window.open(link, "_blank");
+
 
   } else if (window.location.href.indexOf("srcleaks") != -1) {
 
