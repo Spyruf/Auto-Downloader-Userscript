@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Download Link Skipper (suprafiles, zippyshare, filemack, dbree, cloudyfiles, 9clacks)
 // @namespace    http://tampermonkey.net/
-// @version      1.6
+// @version      1.7
 // @description  Skips the extra clicking needed when downloading stuff
 // @author       spyruf
 // @include      *9clacks*.*
@@ -73,35 +73,35 @@ if (window.top != window.self) //-- Don't run on frames or iframes
     // Then any at all
 
     //iTunes
-    if ($('a:contains("iTunes DL"):contains("dbree")')[0] !== null)
+    if ($('a:contains("iTunes DL"):contains("dbree")').length !== 0)
       $('a:contains("iTunes DL"):contains("dbree")')[0].click();
-    else if ($('a:contains("iTunes DL"):contains("suprafiles")')[0] !== null)
+    else if ($('a:contains("iTunes DL"):contains("suprafiles")').length !== 0)
       $('a:contains("iTunes DL"):contains("suprafiles")')[0].click();
-    else if ($('a:contains("iTunes")')[0] !== null)
+    else if ($('a:contains("iTunes")').length !== 0)
       $('a:contains("iTunes")')[0].click();
 
     //320
-    else if ($('a:contains("320 DL"):contains("dbree")')[0] !== null)
+    else if ($('a:contains("320 DL"):contains("dbree")').length !== 0)
       $('a:contains("320 DL"):contains("dbree")')[0].click();
-    else if ($('a:contains("320 DL"):contains("suprafiles")')[0] !== null)
+    else if ($('a:contains("320 DL"):contains("suprafiles")').length !== 0)
       $('a:contains("320 DL"):contains("suprafiles")')[0].click();
-    else if ($('a:contains("320 DL")')[0] !== null)
+    else if ($('a:contains("320 DL")').length !== 0)
       $('a:contains("320 DL")')[0].click();
 
     //M4A
-    else if ($('a:contains("M4A DL"):contains("dbree")')[0] !== null)
+    else if ($('a:contains("M4A DL"):contains("dbree")').length !== 0)
       $('a:contains("M4A DL"):contains("dbree")')[0].click();
-    else if ($('a:contains("M4A DL"):contains("suprafiles")')[0] !== null)
+    else if ($('a:contains("M4A DL"):contains("suprafiles")').length !== 0)
       $('a:contains("M4A DL"):contains("suprafiles")')[0].click();
-    else if ($('a:contains("M4A DL")')[0] !== null)
+    else if ($('a:contains("M4A DL")').length !== 0)
       $('a:contains("M4A DL")')[0].click();
 
     //CDQ
-    else if ($('a:contains("CDQ DL"):contains("dbree")')[0] !== null)
+    else if ($('a:contains("CDQ DL"):contains("dbree")').length !== 0)
       $('a:contains("CDQ DL"):contains("dbree")')[0].click();
-    else if ($('a:contains("CDQ DL"):contains("suprafiles")')[0] !== null)
+    else if ($('a:contains("CDQ DL"):contains("suprafiles")').length !== 0)
       $('a:contains("CDQ DL"):contains("suprafiles")')[0].click();
-    else if ($('a:contains("CDQ DL")')[0] !== null)
+    else if ($('a:contains("CDQ DL")').length !== 0)
       $('a:contains("CDQ DL")')[0].click();
 
     window.close();

@@ -7,3 +7,6 @@ Automatically download files from file-sharing websites
 # Installation
 1. To install this script get Tampermonkey (chrome) or another UserScript extension for your broswer
 2. Install script from Greasyfork.org so that you always have the latest version- https://greasyfork.org/en/scripts/34638-download-link-skipper-suprafiles-zippyshare-filemack
+
+# Known Issues
+- Cannot open new windows in safari
