@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Download Link Skipper (suprafiles, zippyshare, filemack, dbree, cloudyfiles, 9clacks)
 // @namespace    http://tampermonkey.net/
-// @version      2.1
+// @version      2.2
 // @description  Skips the extra clicking needed when downloading stuff
 // @author       spyruf
 // @include      *9clacks*.*
@@ -13,7 +13,6 @@
 // @include      *asdfasdfdbr.ee/*
 // @grant        none
 // @require http://code.jquery.com/jquery-latest.js
-
 // ==/UserScript==
 
 
@@ -164,7 +163,7 @@ if (window.top != window.self) //-- Don't run on frames or iframes
 
 
   } else if (window.location.href.indexOf("dbr") != -1) {
-
+    // Disabled via include
 
     setTimeout(function() {
 
@@ -176,6 +175,8 @@ if (window.top != window.self) //-- Don't run on frames or iframes
 
 
 
+  } else if (window.location.href.indexOf("nofile") != -1) {
+    $('.downloadButton')[0].click();
   }
 
 })();
